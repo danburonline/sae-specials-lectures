@@ -1,0 +1,17 @@
+{
+  "name": "sae-example",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "build:all": "turbo run build",
+    "dev:all": "turbo run dev",
+    "format:all": "turbo run format",
+    "lint:all": "turbo run lint",
+    "start:all": "turbo run start"
+  },
+  "devDependencies": {
+    "turbo": "1.10.14-canary.2"
+  }
+}

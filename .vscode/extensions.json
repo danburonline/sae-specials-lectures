@@ -1,0 +1,5 @@
+{
+  // Only recommendation if somebody doesn't have this extension installed
+  // ? We need to install this extension to use the devcontainer
+  "recommendations": ["ms-vscode-remote.remote-containers"]
+}

@@ -1,0 +1,37 @@
+version: "3.8"
+
+services:
+  devcontainer:
+    container_name: ExampleDevcontainer
+    network_mode: host
+    build:
+      context: .
+      dockerfile: devcontainer.dockerfile
+    volumes:
+      - ..:/sae-example:cached
+    command: sleep infinity
+    # Single env file for all services inside the devcontainer
+    env_file:
+      - .env
+
+  redis:
+    container_name: RedisLocal
+    image: redis:7.2.1-alpine
+    network_mode: host
+    ports:
+      - 6379:6379
+    volumes:
+      - ./redis-data:/data
+    command: redis-server --appendonly yes
+  postgres:
+    container_name: PostgresLocal
+    image: postgres:16.0-alpine
+    network_mode: host
+    ports:
+      - 5432:5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+      # Custom init SQL script to create the database schema if it isn't setup yet
+      - ./templates/init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust

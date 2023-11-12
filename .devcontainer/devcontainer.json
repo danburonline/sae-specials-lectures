@@ -1,0 +1,40 @@
+{
+  "name": "SAE Example",
+  "service": "devcontainer",
+  "dockerComposeFile": "docker-compose.yml",
+  "postCreateCommand": ".devcontainer/scripts/post_create.sh",
+  "workspaceFolder": "/sae-example",
+  "forwardPorts": [
+    3000, // Default port for Next.js
+    8000, // Default port for NestJS
+    6379, // Default port for Redis
+    5432 // Default port for Postgres
+  ],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "degreat.3e",
+        "oven.bun-vscode",
+        "heybourn.headwind",
+        "cesium.gltf-vscode",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "EditorConfig.EditorConfig",
+        "bradlc.vscode-tailwindcss",
+        "DavidAnson.vscode-markdownlint",
+        "mgmcdermott.vscode-language-babel",
+        "streetsidesoftware.code-spell-checker",
+        "bierner.markdown-preview-github-styles"
+      ],
+      "settings": {
+        "files.eol": "\n",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+      }
+    }
+  },
+  "features": {
+    "docker-from-docker": "latest",
+    "git": "os-provided"
+  }
+}
