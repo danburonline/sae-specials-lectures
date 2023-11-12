@@ -1,5 +1,6 @@
-import { useGLTF } from '@react-three/drei'
-import { Bone, MeshStandardMaterial, SkinnedMesh } from 'three'
+import { useAnimations, useGLTF } from '@react-three/drei'
+import { useEffect, useRef } from 'react'
+import { Bone, Group, MeshStandardMaterial, SkinnedMesh } from 'three'
 import type { GLTF } from 'three-stdlib'
 
 type GLTFResult = GLTF & {
@@ -12,12 +13,31 @@ type GLTFResult = GLTF & {
     wings: MeshStandardMaterial
     body: MeshStandardMaterial
   }
+  animations: any[]
 }
 
 const Butterfly = () => {
-  const { nodes, materials } = useGLTF('/models/scene-transformed.glb') as GLTFResult
+  const butterflyRef = useRef<Group>(null!)
+  const { nodes, materials, animations } = useGLTF('/models/scene-transformed.glb') as GLTFResult
+  const { actions } = useAnimations(animations, butterflyRef)
+
+  useEffect(() => {
+    for (const action of Object.values(actions)) {
+      if (action !== null) {
+        action.timeScale = 1.1
+        action.play()
+      }
+    }
+  }, [actions])
+
   return (
-    <group name="AnimatedButterfly" rotation={[0, -Math.PI / 2, 0]} scale={40}>
+    <group
+      name="AnimatedButterfly"
+      rotation={[0, -Math.PI / 2, 0]}
+      scale={50}
+      ref={butterflyRef}
+      position={[0, 2, 0]}
+    >
       <primitive object={nodes._rootJoint} />
       <skinnedMesh
         receiveShadow={false}
