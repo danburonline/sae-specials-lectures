@@ -34,7 +34,6 @@ type GLTFResult = GLTF & {
 
 export default function Plants(props: React.JSX.IntrinsicElements['group']) {
   const { nodes, materials } = useGLTF('/models/plants-transformed.glb') as GLTFResult
-  // Define your spring animation
   const { scale, rotation } = useSpring({
     from: {
       scale: 0,
@@ -42,7 +41,7 @@ export default function Plants(props: React.JSX.IntrinsicElements['group']) {
     },
     to: {
       scale: 1.5,
-      rotation: [0, 0, 0] // 90 degrees around the Y axis
+      rotation: [0, 0, 0]
     },
     config: { mass: 8, tension: 175, friction: 100, precision: 0.00001 },
     delay: 1000
