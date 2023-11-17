@@ -1,0 +1,39 @@
+{
+  "folders": [],
+  "name": "SAE Example HTTP API",
+  "requests": [
+    {
+      "v": "1",
+      "name": "http://localhost:8000/config",
+      "endpoint": "http://localhost:8000/example",
+      "method": "GET",
+      "headers": [],
+      "params": [],
+      "auth": {
+        "authType": "basic",
+        "authActive": true,
+        "username": "daniel",
+        "password": "! GET PW FROM DANIEL"
+      },
+      "body": {
+        "contentType": "application/json",
+        "body": "{\n  \"color\": \"red\"\n}"
+      },
+      "preRequestScript": "",
+      "testScript": ""
+    },
+    {
+      "endpoint": "http://localhost:8000/health",
+      "v": "1",
+      "name": "http://localhost:8000/health",
+      "body": { "body": null, "contentType": null },
+      "testScript": "",
+      "preRequestScript": "",
+      "params": [],
+      "method": "GET",
+      "headers": [],
+      "auth": { "authType": "none", "authActive": true }
+    }
+  ],
+  "v": 1
+}
