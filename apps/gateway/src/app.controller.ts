@@ -8,6 +8,6 @@ export class AppController {
 
   @Get('/example')
   async getHello(@Body() data: { color: string }): Promise<string> {
-    return this.appService.getHello(data)
+    return this.appService.getColor(data)
   }
 }
