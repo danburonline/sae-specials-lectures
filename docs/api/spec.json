@@ -1,39 +1,51 @@
 {
   "folders": [],
-  "name": "SAE Example HTTP API",
+  "v": 1,
   "requests": [
     {
+      "preRequestScript": "",
+      "testScript": "",
+      "auth": {
+        "authActive": true,
+        "password": "?ygN6lg$Q4e4UVRf",
+        "authType": "basic",
+        "username": "daniel"
+      },
+      "method": "GET",
       "v": "1",
       "name": "http://localhost:8000/config",
-      "endpoint": "http://localhost:8000/example",
-      "method": "GET",
       "headers": [],
-      "params": [],
-      "auth": {
-        "authType": "basic",
-        "authActive": true,
-        "username": "daniel",
-        "password": "! GET PW FROM DANIEL"
-      },
       "body": {
         "contentType": "application/json",
-        "body": "{\n  \"color\": \"red\"\n}"
+        "body": "{ \"color\": \"blue\" }"
       },
-      "preRequestScript": "",
-      "testScript": ""
+      "params": [],
+      "endpoint": "http://localhost:8000/example"
     },
     {
-      "endpoint": "http://localhost:8000/health",
-      "v": "1",
-      "name": "http://localhost:8000/health",
-      "body": { "body": null, "contentType": null },
-      "testScript": "",
-      "preRequestScript": "",
-      "params": [],
-      "method": "GET",
       "headers": [],
-      "auth": { "authType": "none", "authActive": true }
+      "preRequestScript": "",
+      "v": "1",
+      "method": "GET",
+      "auth": { "authType": "none", "authActive": true },
+      "endpoint": "http://localhost:8000/health",
+      "name": "http://localhost:8000/health",
+      "body": { "contentType": null, "body": null },
+      "testScript": "",
+      "params": []
+    },
+    {
+      "headers": [],
+      "preRequestScript": "",
+      "v": "1",
+      "method": "GET",
+      "auth": { "authType": "none", "authActive": true },
+      "endpoint": "http://localhost:8000/health-redis",
+      "name": "http://localhost:8000/health-redis",
+      "body": { "contentType": null, "body": null },
+      "testScript": "",
+      "params": []
     }
   ],
-  "v": 1
+  "name": "SAE Example HTTP API"
 }
