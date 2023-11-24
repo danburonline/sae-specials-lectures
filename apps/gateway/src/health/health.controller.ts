@@ -4,7 +4,7 @@ import { Controller, Get, HttpStatus } from '@nestjs/common'
 export class HealthController {
   @Get('/health')
   getMicroserviceHealth() {
-    // Very simple health check, no service needed
+    // Very simple health check, no side effects needed
     return HttpStatus.OK
   }
 }

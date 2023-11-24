@@ -36,9 +36,12 @@ You can inspect the current APIs functionality in the [`docs/api`](./docs/api/sp
 
 ## Technical
 
-- TODO: Add a GitHub Action to format check and lint the code
+- TODO: Add unit tests for the backend
+- TODO: Add E2E tests for the frontend
 - TODO: Update Bun from 1.0.13 to 1.0.14
+- TODO: Create an additional health check with side effects
 - TODO: Enable logger on the backend
+- TODO: Add a GitHub Action to format check and lint the code
 
 ## Hard
 
