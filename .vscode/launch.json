@@ -1,0 +1,43 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Web app client-side (attach Chrome debugger)",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/apps/web"
+    },
+    {
+      "name": "Debug Web app server-side",
+      "localRoot": "${workspaceFolder}/apps/gateway",
+      "type": "node-terminal",
+      "request": "launch",
+      "cwd": "${workspaceFolder}/apps/web",
+      "command": "bun run dev"
+    },
+    {
+      "name": "Debug Gateway app",
+      "type": "node",
+      "request": "launch",
+      "localRoot": "${workspaceFolder}/apps/gateway",
+      "runtimeExecutable": "bun",
+      "autoAttachChildProcesses": true,
+      "runtimeArgs": ["run", "dev", "--debug", "--", "--inspect-brk"],
+      "restart": true,
+      "sourceMaps": true,
+      "stopOnEntry": false,
+      "console": "integratedTerminal"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Debug All",
+      "configurations": [
+        "Debug Gateway app",
+        "Debug Web app server-side",
+        "Debug Web app client-side (attach Chrome debugger)"
+      ]
+    }
+  ]
+}

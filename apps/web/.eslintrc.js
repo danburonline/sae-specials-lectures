@@ -6,7 +6,6 @@ module.exports = {
     'no-undef': 'warn',
     'prefer-const': 'warn',
     'no-unused-vars': 'warn',
-    'no-console': 'warn',
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error'
   },
