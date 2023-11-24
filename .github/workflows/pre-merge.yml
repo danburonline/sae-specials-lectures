@@ -19,5 +19,8 @@ jobs:
       - name: Install dependencies with Bun
         run: bun install
 
+      - name: Run format check
+        run: bun run format:check
+
       - name: Run linting
         run: bun run lint:all
