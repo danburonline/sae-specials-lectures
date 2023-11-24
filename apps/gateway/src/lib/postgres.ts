@@ -5,7 +5,7 @@ const {
   POSTGRES_PASSWORD = '',
   POSTGRES_HOST = 'localhost',
   POSTGRES_PORT = '5432',
-  POSTGRES_DB = 'postgres'
+  POSTGRES_DB = 'postgres
 } = process.env
 
 const connectionString = `postgresql://${encodeURIComponent(POSTGRES_USER)}:${encodeURIComponent(
