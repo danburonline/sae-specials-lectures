@@ -19,32 +19,3 @@ Both backend and frontend are written in TypeScript. We use Node.js as our runti
 ### API
 
 You can inspect the current APIs functionality in the [`docs/api`](./docs/api/spec.json) folder. The API is documented with a Postman specification file. You can import this file into Postman or Hoppscotch to test the API.
-
----
-
-## Tasks
-
-- TODO: Create an endpoint that returns colors stored on Postgres
-- TODO: Create a search bar that allows to search for colors with a dropdown on the frontend
-- TODO: Create a new endpoint that returns the colors based on the search term
-- TODO: Store the recently searched colors in Redis
-- TODO: Show the recently searched colors on the frontend
-
-## Bugs
-
-- TODO: Error handling and sanitization on the backend
-
-## Technical
-
-- TODO: Add unit tests for the backend
-- TODO: Add E2E tests for the frontend
-- TODO: Update Bun from 1.0.13 to 1.0.14
-- TODO: Create an additional health check with side effects
-- TODO: Enable logger on the backend
-- TODO: Add a GitHub Action to format check and lint the code
-
-## Hard
-
-- TODO: Make the server-side debugger work for Next.js 😅
-- TODO: Fix the display of textures that they point in the right direction
-- TODO: Create a native app out of the frontend with Capacitor.js
