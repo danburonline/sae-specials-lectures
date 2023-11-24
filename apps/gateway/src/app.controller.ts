@@ -4,7 +4,8 @@ import { AppService } from './app.service'
 
 @Controller()
 export class AppController {
-  constructor(private readonly appService: AppService) {}
+  // eslint-disable-next-line prettier/prettier
+  constructor(private readonly appService: AppService) { }
 
   @Get('/example')
   async getHello(@Body() data: { color: string }): Promise<string> {
