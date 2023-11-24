@@ -19,3 +19,11 @@ Both backend and frontend are written in TypeScript. We use Node.js as our runti
 ### API
 
 You can inspect the current APIs functionality in the [`docs/api`](./docs/api/spec.json) folder. The API is documented with a Postman specification file. You can import this file into Postman or Hoppscotch to test the API.
+
+## GitHub Actions
+
+Push Request Quality Check
+
+We have enhanced our development process by incorporating GitHub Actions for continuous integration. This update ensures that your code undergoes rigorous testing and formatting checks before being merged into the main branch.
+Before merging your changes, GitHub Actions will verify the scripts, ensuring they meet our formatting standards and pass relevant checks. This guarantees the maintenance of code quality and consistency across the repository.
+Feel confident in the reliability of your contributions, and thank you for your commitment to maintaining code excellence in our project!

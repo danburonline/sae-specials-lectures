@@ -1,0 +1,26 @@
+name: Pre-merge checks
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  pre-merge:
+    runs-on: ubuntu-latest
+    steps:
+      # Enables that the GitHub Action "computer" can access the repo's files
+      - uses: actions/checkout@v2
+      # This line makes that you can use Bun inside the GitHub Action "computer"
+      - uses: oven-sh/setup-bun@v1
+        with:
+          version: 1.0.14 # Same as in the devcontainer
+
+      - name: Install dependencies with Bun
+        run: bun install
+
+      - name: Run format check
+        run: bun run format:check
+
+      - name: Run linting
+        run: bun run lint:all

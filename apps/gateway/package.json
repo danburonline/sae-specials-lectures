@@ -5,6 +5,7 @@
     "build": "nest build",
     "dev": "nest start --watch",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "eslint \"{src,apps,libs}/**/*.ts\" --fix",
     "start": "node dist/main",
     "start:nest": "nest start",

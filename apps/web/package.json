@@ -6,6 +6,7 @@
     "debug": "NODE_OPTIONS='--inspect' next dev",
     "dev": "next dev",
     "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "lint": "next lint --fix",
     "start": "NODE_ENV=production next start"
   },
