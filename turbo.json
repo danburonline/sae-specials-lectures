@@ -3,6 +3,7 @@
   "pipeline": {
     "dev": {},
     "format": {},
+    "format:check": {},
     "build": {
       "outputs": [".next/**", "!.next/cache/**"]
     },
