@@ -19,3 +19,5 @@ Both backend and frontend are written in TypeScript. We use Node.js as our runti
 ### API
 
 You can inspect the current APIs functionality in the [`docs/api`](./docs/api/spec.json) folder. The API is documented with a Postman specification file. You can import this file into Postman or Hoppscotch to test the API.
+
+## GitHub Actions
