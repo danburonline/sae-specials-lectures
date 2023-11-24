@@ -4,15 +4,15 @@ import pool from './lib/postgres'
 
 @Injectable()
 export class AppService {
-  async getColor(request: { color: string }): Promise<string> {
-    const searchQuery = request.color.toLocaleLowerCase()
+  async getColor(request: { color: string }): Promise<string[]> {
+    const searchQuery = `%${request.color.toLocaleLowerCase()}%`
 
-    const { rows } = await pool.query('SELECT * FROM colors WHERE color = $1', [searchQuery])
+    const { rows } = await pool.query('SELECT * FROM colors WHERE color ILIKE $1', [searchQuery])
 
     if (rows.length > 0) {
-      return rows[0].color
+      return rows.map((row) => row.color) as string[]
     } else {
-      return 'No color found'
+      return ['No color found'] as string[]
     }
   }
 }
