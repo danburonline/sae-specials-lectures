@@ -16,6 +16,10 @@ This will start the backend and frontend in development mode. The backend will b
 
 Both backend and frontend are written in TypeScript. We use Node.js as our runtime and Bun as our dependency manager. The backend uses Nest.js as a web framework and the frontend uses Next.js. The backend uses Postgres as a database and Redis as a cache. On the frontend, we use TailwindCSS as a CSS framework and React Three Fiber to render the 3D scenes.
 
+### API
+
+You can inspect the current APIs functionality in the [`docs/api`](./docs/api/spec.json) folder. The API is documented with a Postman specification file. You can import this file into Postman or Hoppscotch to test the API.
+
 ---
 
 ## Tasks

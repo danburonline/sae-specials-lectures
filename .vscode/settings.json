@@ -1,5 +1,5 @@
 {
   // ? This is a list of words that will be ignored by the spell checker
   // Feel free to add more words to it using the pattern below
-  "cSpell.words": ["Devcontainers", "lucide"]
+  "cSpell.words": ["Devcontainers", "Hoppscotch", "lucide"]
 }
