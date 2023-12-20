@@ -1,4 +1,4 @@
-# SAE Example
+# SAE Specials Lectures
 
 ## Quick start
 
