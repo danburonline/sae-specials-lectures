@@ -15,6 +15,6 @@ INSERT INTO "public"."colors" ("id", "color", "main_color") VALUES
 (11, 'grey', 'f'),
 (12, 'silver', 'f'),
 (13, 'gold', 't'),
-(14, 'oliv', 'f'),
+(14, 'olive', 'f'),
 (15, 'mint', 'f'),
 (16, 'bronze', 'f');
