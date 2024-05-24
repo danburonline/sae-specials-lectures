@@ -10,9 +10,6 @@ services:
     volumes:
       - ..:/sae-example:cached
     command: sleep infinity
-    # Single env file for all services inside the devcontainer
-    env_file:
-      - .env
 
   redis:
     container_name: RedisLocal
